@@ -1,0 +1,10 @@
+CREATE TABLE Rooms(room_num INTEGER PRIMARY KEY AUTOINCREMENT, price INT, bed_type TEXT, availability TEXT);
+
+CREATE TABLE Customers(customer_id INT PRIMARY KEY, name TEXT, gender TEXT, country TEXT, deposit INT, checkin_time Text, room_num INTEGER,FOREIGN KEY(room_num) REFERENCES Rooms(room_num)); 
+
+CREATE TABLE Employees(emp_id INTEGER PRIMARY KEY AUTOINCREMENT, ssn TEXT, name TEXT, age TEXT, gender TEXT, job TEXT, phone_num TEXT, salary TEXT);
+
+CREATE TABLE Admins(user_name TEXT PRIMARY KEY, password TEXT);
+
+INSERT INTO Admins (user_name,password)VALUES('admin','1234');
+INSERT INTO Admins (user_name,password)VALUES('reception','4321')
